@@ -1,0 +1,15 @@
+{
+    "name": "Rust RISC-V OS Lab",
+    "image": "mcr.microsoft.com/devcontainers/rust:1",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "vadimcn.vscode-lldb",
+                "tamasfe.even-better-toml"
+            ]
+        }
+    },
+    "postCreateCommand": "apt-get update && apt-get install -y qemu-system-riscv64 gcc-riscv64-unknown-elf gdb-multiarch && rustup target add riscv64gc-unknown-none-elf",
+    "remoteUser": "vscode"
+}
